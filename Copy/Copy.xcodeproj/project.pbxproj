@@ -13,6 +13,7 @@
 		819E76A92330D9BE00BCE797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 819E76A82330D9BE00BCE797 /* Assets.xcassets */; };
 		819E76AC2330D9BE00BCE797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 819E76AA2330D9BE00BCE797 /* LaunchScreen.storyboard */; };
 		819E76AF2330D9BE00BCE797 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 819E76AE2330D9BE00BCE797 /* main.m */; };
+		819E76B72330E70200BCE797 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 819E76B62330E70200BCE797 /* Set.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		819E76AB2330D9BE00BCE797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		819E76AD2330D9BE00BCE797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		819E76AE2330D9BE00BCE797 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		819E76B52330E70200BCE797 /* Set.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
+		819E76B62330E70200BCE797 /* Set.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				819E76A02330D9BC00BCE797 /* AppDelegate.m */,
 				819E76A22330D9BC00BCE797 /* ViewController.h */,
 				819E76A32330D9BC00BCE797 /* ViewController.m */,
+				819E76B52330E70200BCE797 /* Set.h */,
+				819E76B62330E70200BCE797 /* Set.m */,
 				819E76A52330D9BC00BCE797 /* Main.storyboard */,
 				819E76A82330D9BE00BCE797 /* Assets.xcassets */,
 				819E76AA2330D9BE00BCE797 /* LaunchScreen.storyboard */,
@@ -141,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819E76B72330E70200BCE797 /* Set.m in Sources */,
 				819E76A42330D9BC00BCE797 /* ViewController.m in Sources */,
 				819E76AF2330D9BE00BCE797 /* main.m in Sources */,
 				819E76A12330D9BC00BCE797 /* AppDelegate.m in Sources */,

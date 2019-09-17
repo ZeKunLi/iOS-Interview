@@ -52,6 +52,13 @@
 //    NSString *strCopy = [mutableStr copy];
 //     // 内容复制
 //    NSMutableString *strMCopy = [mutableStr mutableCopy];
+    
+    /*
+     3.写一个 setter 方法用于完成 @property (nonatomic, retain) NSString *name，写一个 setter 方法用于完成 @property (nonatomic, copy) NSString *name
+     
+     
+     */
+    
 }
 
 
