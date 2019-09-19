@@ -15,9 +15,9 @@ void char_reverse(char* cha) {
     
     while (begin < end) {
         // 交换两个字符串,同时移动指针
-        char temp = *begin;
-        *(begin ++) = *end;
-        *(end --) = temp;
+        char temp = *begin;//把 begin 当中的字符取出来
+        *(begin ++) = *end;//把 end 的值刚到 begin 里面之后 begin+1
+        *(end --) = temp;//把 temp 的值刚到 end 里面之后 end+1
         
     }
     
