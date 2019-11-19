@@ -58,6 +58,30 @@
      
      */
     
+    
+    /*
+  4.如果对一个可变数组进行深拷贝，则会对可变数组里面的元素也会进行重新复制一份吗？答：不会，深拷贝，可变数组就是一个箱子，如果进行深拷贝，则会再拷贝出一个新的箱子，但箱子里面的元素不会拷贝出新的。
+    */
+    NSString *string1 = @"content";
+    NSString *string2 = @"content";
+    NSString *string3 = @"content";
+    
+    
+    NSLog(@"%p",string1);
+    NSMutableArray * arr = [NSMutableArray arrayWithObjects:string1,string2,string3, nil];
+    
+    
+    for (NSString * str in arr) {
+        NSLog(@"%p",str);
+    }
+    
+    NSArray * arr2 = arr.copy;
+    
+    
+    for (NSString * str in arr2) {
+        NSLog(@"%p",str);
+    }
+    
 }
 
 
