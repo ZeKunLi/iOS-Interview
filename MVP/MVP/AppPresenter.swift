@@ -8,24 +8,36 @@
 
 import UIKit
 
-struct AppPresenter {
-    let controller:UIViewController;
+class AppPresenter: NSObject {
+    var controller:UIViewController?
     
     init(controller:UIViewController) {
-        self.controller = controller
+        super.init()
         
+        self.controller = controller
+
         // 创建 View
         let appView = AppView()
         appView.frame = CGRect(x: 100, y: 100, width: 100, height: 150);
+        appView.delegate = self
         controller.view.addSubview(appView)
-        
+
         // 创建 Model
         let appModel = AppModel(name: "weChat", icon: "AppIcon")
-        appView.iconImageView?.image = UIImage(named: appModel.icon)
-        appView.nameLabel?.text = appModel.name
-        
-            
-        
-        
+        appView.setup(name: appModel.name, imageName: appModel.icon)
+
+
+
     }
+    
 }
+
+extension AppPresenter : AppViewDelegate {
+    func appViewDidClick() {
+        print("调用成功了")
+    }
+    
+
+
+}
+

@@ -8,10 +8,19 @@
 
 import UIKit
 
+protocol AppViewDelegate: NSObjectProtocol {
+    func appViewDidClick()
+}
+
 class AppView: UIView {
     
-    weak var iconImageView: UIImageView?
-    weak var nameLabel: UILabel?
+    
+    
+    private weak var iconImageView: UIImageView?
+    private weak var nameLabel: UILabel?
+    weak var delegate: AppViewDelegate?
+    
+    
     
     
     override init(frame: CGRect) {
@@ -30,7 +39,21 @@ class AppView: UIView {
         
     }
     
+    func setup(name:String ,imageName icon:String) {
+        self.iconImageView?.image = UIImage(named:icon)
+        self.nameLabel?.text = name
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (self.delegate != nil) {
+            delegate?.appViewDidClick()
+        }
+
+        
+        
     }
 }
