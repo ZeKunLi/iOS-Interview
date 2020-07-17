@@ -7,8 +7,16 @@
 //
 
 #import "AppDelegate+Arithmetic.h"
+#import "CharReverse.h"
 #import "ReverseList.h"
 @implementation AppDelegate (Arithmetic)
+
+-(void)charReverse {
+    char chars[] = "hello,word!";
+    char_reverse(chars);
+    
+    printf("%s\n",chars);
+}
 
 - (void)reverseList {
     

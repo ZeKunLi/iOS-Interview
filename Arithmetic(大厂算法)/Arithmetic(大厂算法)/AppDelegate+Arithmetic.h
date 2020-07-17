@@ -12,8 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AppDelegate (Arithmetic)
 
+/// 反转字符串
+- (void)charReverse;
 /// 链表反转
 - (void)reverseList;
+
 @end
 
 NS_ASSUME_NONNULL_END

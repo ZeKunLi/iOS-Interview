@@ -18,10 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    char chars[] = "hello,word!";
-    char_reverse(chars);
-    
-    printf("%s\n",chars);
+    [self charReverse];
     [self reverseList];
     return YES;
 }
