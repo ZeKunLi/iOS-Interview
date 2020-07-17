@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CharReverse.h"
+#import "AppDelegate+Arithmetic.h"
 @interface AppDelegate ()
 
 @end
@@ -21,7 +22,7 @@
     char_reverse(chars);
     
     printf("%s\n",chars);
-    
+    [self reverseList];
     return YES;
 }
 
