@@ -9,6 +9,8 @@
 #import "AppDelegate+Arithmetic.h"
 #import "CharReverse.h"
 #import "ReverseList.h"
+#import "MergeSortedList.h"
+
 @implementation AppDelegate (Arithmetic)
 
 -(void)charReverse {
@@ -25,6 +27,28 @@
     printf("--------------\n");
     struct Node *newNode = reverseList(headNode);
     printList(newNode);
+    
+}
+
+- (void)mergeSortedList {
+    
+    // 有序数组归并
+    int a[5] = {0, 2, 3, 4, 6};
+    
+    int b[8] = {1, 5, 7, 9, 10 ,11 ,12, 13};
+    
+    // 用于存储归并数组
+    int result[13];
+    
+    margeList(a, 5, b, 8, result);
+    
+    
+    
+    
+    for (int i = 0; i < 13; i ++) {
+        printf("%d\n",result[i]);
+    }
+    
     
 }
 

@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)charReverse;
 /// 链表反转
 - (void)reverseList;
-
+/// 合并有序数组
+- (void)mergeSortedList;
 @end
 
 NS_ASSUME_NONNULL_END

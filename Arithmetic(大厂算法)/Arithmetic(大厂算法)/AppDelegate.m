@@ -20,6 +20,7 @@
     // Override point for customization after application launch.
     [self charReverse];
     [self reverseList];
+    [self mergeSortedList];
     return YES;
 }
 
