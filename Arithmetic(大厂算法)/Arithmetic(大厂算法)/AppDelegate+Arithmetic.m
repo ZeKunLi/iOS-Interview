@@ -25,7 +25,7 @@
     struct Node *headNode = constructList();
     printList(headNode);
     printf("--------------\n");
-    struct Node *newNode = reverseList(headNode);
+    struct Node *newNode = recursiveReveresList(headNode);
     printList(newNode);
     
 }

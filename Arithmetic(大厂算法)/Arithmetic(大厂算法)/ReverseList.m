@@ -36,6 +36,18 @@ struct Node* reverseList(struct Node *head) {
     return newHead;
 }
 
+struct Node *recursiveReveresList(struct Node *head) {
+    if (head == NULL || head->next == NULL) {
+        return head;
+    }
+    struct Node *newHead = recursiveReveresList(head->next);
+    // 反转链表(处理当前当前还没被反转的结点的 head 1->2->1)
+    head->next->next = head;
+    // 断环(1->2 2->1)
+    head->next = NULL;
+    return newHead;
+}
+
 struct Node * constructList(void) {
     
     // 1.定义一个头结点指向
@@ -45,7 +57,7 @@ struct Node * constructList(void) {
     struct Node *cur = NULL;
     
     // 3.创建每一个结点，实现链表结点相挂
-    for (int i = 1; i < 5; i++) {
+    for (int i = 1; i <= 3; i++) {
         // 1.创建结点分配的空间
         struct Node*node = malloc(sizeof(struct Node));
         // 2.对应的数据域位当前 i

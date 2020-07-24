@@ -26,6 +26,9 @@ struct Node {
 /// @param head 原来链表的头结点
 struct Node* reverseList(struct Node *head);
 
+/// 递归反转链表
+/// @param head 原来链表的头结点
+struct Node *recursiveReveresList(struct Node *head);
 
 /// 链表构造
 struct Node * constructList(void);
