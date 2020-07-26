@@ -10,6 +10,7 @@
 #import "CharReverse.h"
 #import "ReverseList.h"
 #import "MergeSortedList.h"
+#import "HashFind.h"
 
 @implementation AppDelegate (Arithmetic)
 
@@ -51,5 +52,13 @@
     
     
 }
+
+- (void)hasdFind {
+    // 查找第一个只出现一次的字符
+    char cha[] = "leetcode";
+    char fc = findFirstChar(cha);
+    printf("this char is %c \n", fc);
+}
+
 
 @end

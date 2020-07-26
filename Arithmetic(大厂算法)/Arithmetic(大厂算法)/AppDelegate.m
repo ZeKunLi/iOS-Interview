@@ -19,8 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    [self charReverse];
-    [self reverseList];
+//    [self reverseList];
 //    [self mergeSortedList];
+    [self hasdFind];
     return YES;
 }
 

@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)reverseList;
 /// 合并有序数组
 - (void)mergeSortedList;
+/// Hash 查找
+- (void)hasdFind;
 @end
 
 NS_ASSUME_NONNULL_END

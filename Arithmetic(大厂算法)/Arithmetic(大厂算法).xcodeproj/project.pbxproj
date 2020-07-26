@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F8408AF24CD7B8D00859C04 /* HashFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8408AE24CD7B8D00859C04 /* HashFind.m */; };
 		7FBF09AD24C1D5D30001C514 /* AppDelegate+Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF09AC24C1D5D30001C514 /* AppDelegate+Arithmetic.m */; };
 		7FBF09B024C565930001C514 /* MergeSortedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBF09AF24C565930001C514 /* MergeSortedList.m */; };
 		81DAFFC7233397E900DA969D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DAFFC6233397E900DA969D /* AppDelegate.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F8408AD24CD7B8D00859C04 /* HashFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashFind.h; sourceTree = "<group>"; };
+		7F8408AE24CD7B8D00859C04 /* HashFind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HashFind.m; sourceTree = "<group>"; };
 		7FBF09AB24C1D5D30001C514 /* AppDelegate+Arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Arithmetic.h"; sourceTree = "<group>"; };
 		7FBF09AC24C1D5D30001C514 /* AppDelegate+Arithmetic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Arithmetic.m"; sourceTree = "<group>"; };
 		7FBF09AE24C565930001C514 /* MergeSortedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeSortedList.h; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				81DAFFDF2333C37900DA969D /* ReverseList.m */,
 				7FBF09AE24C565930001C514 /* MergeSortedList.h */,
 				7FBF09AF24C565930001C514 /* MergeSortedList.m */,
+				7F8408AD24CD7B8D00859C04 /* HashFind.h */,
+				7F8408AE24CD7B8D00859C04 /* HashFind.m */,
 				81DAFFCB233397E900DA969D /* Main.storyboard */,
 				81DAFFCE233397EA00DA969D /* Assets.xcassets */,
 				81DAFFD0233397EA00DA969D /* LaunchScreen.storyboard */,
@@ -163,6 +168,7 @@
 			files = (
 				7FBF09B024C565930001C514 /* MergeSortedList.m in Sources */,
 				81DAFFCA233397E900DA969D /* ViewController.m in Sources */,
+				7F8408AF24CD7B8D00859C04 /* HashFind.m in Sources */,
 				81DAFFD5233397EA00DA969D /* main.m in Sources */,
 				7FBF09AD24C1D5D30001C514 /* AppDelegate+Arithmetic.m in Sources */,
 				81DAFFDD2333983500DA969D /* CharReverse.m in Sources */,
