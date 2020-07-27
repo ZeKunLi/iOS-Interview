@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "CharReverse.h"
 #import "AppDelegate+Arithmetic.h"
 @interface AppDelegate ()
 
@@ -21,7 +20,7 @@
 //    [self charReverse];
 //    [self reverseList];
 //    [self mergeSortedList];
-    [self hasdFind];
+//    [self hasdFind];
     return YES;
 }
 
