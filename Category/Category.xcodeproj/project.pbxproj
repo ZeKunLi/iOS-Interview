@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F14325D24D9B5C8001F3757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F14325C24D9B5C8001F3757 /* main.m */; };
-		7F14326624DA560E001F3757 /* ZKPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F14326524DA560E001F3757 /* ZKPerson.m */; };
-		7F50A0D624E1A0A100F8B4E6 /* ZKStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F50A0D524E1A0A100F8B4E6 /* ZKStudent.m */; };
+		7F50A0E724E41B7700F8B4E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F50A0E624E41B7700F8B4E6 /* main.m */; };
+		7F50A0EF24E41B9800F8B4E6 /* ZKPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F50A0EE24E41B9800F8B4E6 /* ZKPerson.m */; };
+		7F50A0F224E41BB200F8B4E6 /* ZKPerson+Eat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F50A0F124E41BB200F8B4E6 /* ZKPerson+Eat.m */; };
+		7F50A0F824E41BDB00F8B4E6 /* ZKPerson+Study.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F50A0F724E41BDB00F8B4E6 /* ZKPerson+Study.m */; };
+		7F50A0FB24E41BEF00F8B4E6 /* ZKPerson+Sleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F50A0FA24E41BEF00F8B4E6 /* ZKPerson+Sleep.m */; };
+		7F50A0FE24E41C7200F8B4E6 /* ZKPerson+Play.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F50A0FD24E41C7200F8B4E6 /* ZKPerson+Play.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7F14325724D9B5C8001F3757 /* CopyFiles */ = {
+		7F50A0E124E41B7700F8B4E6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,20 +28,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7F14325924D9B5C8001F3757 /* Block */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Block; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F14325C24D9B5C8001F3757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7F14326424DA560E001F3757 /* ZKPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPerson.h; sourceTree = "<group>"; };
-		7F14326524DA560E001F3757 /* ZKPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKPerson.m; sourceTree = "<group>"; };
-		7F14326724DA57C7001F3757 /* ZKPerson.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZKPerson.cpp; sourceTree = "<group>"; };
-		7F14326824DA61F9001F3757 /* mian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mian.cpp; sourceTree = "<group>"; };
-		7F50A0A424E0E88C00F8B4E6 /* runtimemain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = runtimemain.cpp; sourceTree = "<group>"; };
-		7F50A0D324E156FF00F8B4E6 /* __blockmain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = __blockmain.cpp; sourceTree = "<group>"; };
-		7F50A0D424E1A0A100F8B4E6 /* ZKStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKStudent.h; sourceTree = "<group>"; };
-		7F50A0D524E1A0A100F8B4E6 /* ZKStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKStudent.m; sourceTree = "<group>"; };
+		7F50A0E324E41B7700F8B4E6 /* Category */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Category; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F50A0E624E41B7700F8B4E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F50A0ED24E41B9800F8B4E6 /* ZKPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPerson.h; sourceTree = "<group>"; };
+		7F50A0EE24E41B9800F8B4E6 /* ZKPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKPerson.m; sourceTree = "<group>"; };
+		7F50A0F024E41BB200F8B4E6 /* ZKPerson+Eat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZKPerson+Eat.h"; sourceTree = "<group>"; };
+		7F50A0F124E41BB200F8B4E6 /* ZKPerson+Eat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZKPerson+Eat.m"; sourceTree = "<group>"; };
+		7F50A0F624E41BDB00F8B4E6 /* ZKPerson+Study.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZKPerson+Study.h"; sourceTree = "<group>"; };
+		7F50A0F724E41BDB00F8B4E6 /* ZKPerson+Study.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZKPerson+Study.m"; sourceTree = "<group>"; };
+		7F50A0F924E41BEF00F8B4E6 /* ZKPerson+Sleep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZKPerson+Sleep.h"; sourceTree = "<group>"; };
+		7F50A0FA24E41BEF00F8B4E6 /* ZKPerson+Sleep.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZKPerson+Sleep.m"; sourceTree = "<group>"; };
+		7F50A0FC24E41C7200F8B4E6 /* ZKPerson+Play.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZKPerson+Play.h"; sourceTree = "<group>"; };
+		7F50A0FD24E41C7200F8B4E6 /* ZKPerson+Play.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZKPerson+Play.m"; sourceTree = "<group>"; };
+		7F50A0FF24E41EA500F8B4E6 /* ZKPerson+Eat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "ZKPerson+Eat.cpp"; sourceTree = "<group>"; };
+		7F50A10024E41FD400F8B4E6 /* ZKPerson+Play.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "ZKPerson+Play.cpp"; sourceTree = "<group>"; };
+		7F50A10224E41FDB00F8B4E6 /* ZKPerson+Sleep.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "ZKPerson+Sleep.cpp"; sourceTree = "<group>"; };
+		7F50A10324E41FE700F8B4E6 /* ZKPerson+Study.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "ZKPerson+Study.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7F14325624D9B5C8001F3757 /* Frameworks */ = {
+		7F50A0E024E41B7700F8B4E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,73 +57,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7F14325024D9B5C8001F3757 = {
+		7F50A0DA24E41B7700F8B4E6 = {
 			isa = PBXGroup;
 			children = (
-				7F14325B24D9B5C8001F3757 /* Block */,
-				7F14325A24D9B5C8001F3757 /* Products */,
+				7F50A0E524E41B7700F8B4E6 /* Category */,
+				7F50A0E424E41B7700F8B4E6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7F14325A24D9B5C8001F3757 /* Products */ = {
+		7F50A0E424E41B7700F8B4E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7F14325924D9B5C8001F3757 /* Block */,
+				7F50A0E324E41B7700F8B4E6 /* Category */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7F14325B24D9B5C8001F3757 /* Block */ = {
+		7F50A0E524E41B7700F8B4E6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				7F14325C24D9B5C8001F3757 /* main.m */,
-				7F14326424DA560E001F3757 /* ZKPerson.h */,
-				7F14326524DA560E001F3757 /* ZKPerson.m */,
-				7F14326724DA57C7001F3757 /* ZKPerson.cpp */,
-				7F50A0D424E1A0A100F8B4E6 /* ZKStudent.h */,
-				7F50A0D524E1A0A100F8B4E6 /* ZKStudent.m */,
-				7F14326824DA61F9001F3757 /* mian.cpp */,
-				7F50A0A424E0E88C00F8B4E6 /* runtimemain.cpp */,
-				7F50A0D324E156FF00F8B4E6 /* __blockmain.cpp */,
+				7F50A0E624E41B7700F8B4E6 /* main.m */,
+				7F50A0ED24E41B9800F8B4E6 /* ZKPerson.h */,
+				7F50A0EE24E41B9800F8B4E6 /* ZKPerson.m */,
+				7F50A0F024E41BB200F8B4E6 /* ZKPerson+Eat.h */,
+				7F50A0F124E41BB200F8B4E6 /* ZKPerson+Eat.m */,
+				7F50A0FF24E41EA500F8B4E6 /* ZKPerson+Eat.cpp */,
+				7F50A0F624E41BDB00F8B4E6 /* ZKPerson+Study.h */,
+				7F50A0F724E41BDB00F8B4E6 /* ZKPerson+Study.m */,
+				7F50A10324E41FE700F8B4E6 /* ZKPerson+Study.cpp */,
+				7F50A0F924E41BEF00F8B4E6 /* ZKPerson+Sleep.h */,
+				7F50A0FA24E41BEF00F8B4E6 /* ZKPerson+Sleep.m */,
+				7F50A10224E41FDB00F8B4E6 /* ZKPerson+Sleep.cpp */,
+				7F50A0FC24E41C7200F8B4E6 /* ZKPerson+Play.h */,
+				7F50A0FD24E41C7200F8B4E6 /* ZKPerson+Play.m */,
+				7F50A10024E41FD400F8B4E6 /* ZKPerson+Play.cpp */,
 			);
-			path = Block;
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7F14325824D9B5C8001F3757 /* Block */ = {
+		7F50A0E224E41B7700F8B4E6 /* Category */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F14326024D9B5C8001F3757 /* Build configuration list for PBXNativeTarget "Block" */;
+			buildConfigurationList = 7F50A0EA24E41B7700F8B4E6 /* Build configuration list for PBXNativeTarget "Category" */;
 			buildPhases = (
-				7F14325524D9B5C8001F3757 /* Sources */,
-				7F14325624D9B5C8001F3757 /* Frameworks */,
-				7F14325724D9B5C8001F3757 /* CopyFiles */,
+				7F50A0DF24E41B7700F8B4E6 /* Sources */,
+				7F50A0E024E41B7700F8B4E6 /* Frameworks */,
+				7F50A0E124E41B7700F8B4E6 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Block;
-			productName = Block;
-			productReference = 7F14325924D9B5C8001F3757 /* Block */;
+			name = Category;
+			productName = Category;
+			productReference = 7F50A0E324E41B7700F8B4E6 /* Category */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7F14325124D9B5C8001F3757 /* Project object */ = {
+		7F50A0DB24E41B7700F8B4E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Personal;
 				TargetAttributes = {
-					7F14325824D9B5C8001F3757 = {
+					7F50A0E224E41B7700F8B4E6 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
 			};
-			buildConfigurationList = 7F14325424D9B5C8001F3757 /* Build configuration list for PBXProject "Block" */;
+			buildConfigurationList = 7F50A0DE24E41B7700F8B4E6 /* Build configuration list for PBXProject "Category" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,31 +137,34 @@
 				en,
 				Base,
 			);
-			mainGroup = 7F14325024D9B5C8001F3757;
-			productRefGroup = 7F14325A24D9B5C8001F3757 /* Products */;
+			mainGroup = 7F50A0DA24E41B7700F8B4E6;
+			productRefGroup = 7F50A0E424E41B7700F8B4E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7F14325824D9B5C8001F3757 /* Block */,
+				7F50A0E224E41B7700F8B4E6 /* Category */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7F14325524D9B5C8001F3757 /* Sources */ = {
+		7F50A0DF24E41B7700F8B4E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F50A0D624E1A0A100F8B4E6 /* ZKStudent.m in Sources */,
-				7F14325D24D9B5C8001F3757 /* main.m in Sources */,
-				7F14326624DA560E001F3757 /* ZKPerson.m in Sources */,
+				7F50A0E724E41B7700F8B4E6 /* main.m in Sources */,
+				7F50A0EF24E41B9800F8B4E6 /* ZKPerson.m in Sources */,
+				7F50A0FB24E41BEF00F8B4E6 /* ZKPerson+Sleep.m in Sources */,
+				7F50A0FE24E41C7200F8B4E6 /* ZKPerson+Play.m in Sources */,
+				7F50A0F224E41BB200F8B4E6 /* ZKPerson+Eat.m in Sources */,
+				7F50A0F824E41BDB00F8B4E6 /* ZKPerson+Study.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7F14325E24D9B5C8001F3757 /* Debug */ = {
+		7F50A0E824E41B7700F8B4E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -204,7 +222,7 @@
 			};
 			name = Debug;
 		};
-		7F14325F24D9B5C8001F3757 /* Release */ = {
+		7F50A0E924E41B7700F8B4E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -255,11 +273,9 @@
 			};
 			name = Release;
 		};
-		7F14326124D9B5C8001F3757 /* Debug */ = {
+		7F50A0EB24E41B7700F8B4E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MLN3Q39SR;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -267,11 +283,9 @@
 			};
 			name = Debug;
 		};
-		7F14326224D9B5C8001F3757 /* Release */ = {
+		7F50A0EC24E41B7700F8B4E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MLN3Q39SR;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -282,25 +296,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7F14325424D9B5C8001F3757 /* Build configuration list for PBXProject "Block" */ = {
+		7F50A0DE24E41B7700F8B4E6 /* Build configuration list for PBXProject "Category" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F14325E24D9B5C8001F3757 /* Debug */,
-				7F14325F24D9B5C8001F3757 /* Release */,
+				7F50A0E824E41B7700F8B4E6 /* Debug */,
+				7F50A0E924E41B7700F8B4E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F14326024D9B5C8001F3757 /* Build configuration list for PBXNativeTarget "Block" */ = {
+		7F50A0EA24E41B7700F8B4E6 /* Build configuration list for PBXNativeTarget "Category" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F14326124D9B5C8001F3757 /* Debug */,
-				7F14326224D9B5C8001F3757 /* Release */,
+				7F50A0EB24E41B7700F8B4E6 /* Debug */,
+				7F50A0EC24E41B7700F8B4E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7F14325124D9B5C8001F3757 /* Project object */;
+	rootObject = 7F50A0DB24E41B7700F8B4E6 /* Project object */;
 }
