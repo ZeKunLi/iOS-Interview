@@ -14,4 +14,9 @@
    NSLog(@"%@",@"load in ZKCat");
 }
 
++ (void)initialize
+{
+    NSLog(@"%@",@"initialize in ZKCat");
+}
+
 @end

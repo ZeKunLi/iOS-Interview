@@ -14,6 +14,11 @@
     NSLog(@"%@",@"load in ZKPerson (Category2)");
 }
 
++ (void)initialize
+{
+    NSLog(@"%@",@"initialize in ZKPerson (Category2)");
+}
+
 + (void)printName {
     NSLog(@"%@",@"printName in ZKPerson (Category2)");
 }

@@ -14,4 +14,9 @@
     NSLog(@"%@",@"load in ZKStudent");
 }
 
+//+ (void)initialize
+//{
+//    NSLog(@"%@",@"initialize in ZKStudent");
+//}
+
 @end

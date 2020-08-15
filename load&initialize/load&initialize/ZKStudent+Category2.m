@@ -14,4 +14,9 @@
     NSLog(@"%@",@"load in ZKStudent (Category2)");
 }
 
+//+ (void)initialize
+//{
+//    NSLog(@"%@",@"initialize in ZKStudent (Category2)");
+//}
+
 @end

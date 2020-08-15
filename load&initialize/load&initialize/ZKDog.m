@@ -14,4 +14,9 @@
    NSLog(@"%@",@"load in ZKDog");
 }
 
++ (void)initialize
+{
+    NSLog(@"%@",@"initialize in ZKDog");
+}
+
 @end
