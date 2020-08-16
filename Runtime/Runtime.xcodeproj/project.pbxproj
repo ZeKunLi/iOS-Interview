@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F9DFFE224E83FF100D4714B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DFFE124E83FF100D4714B /* main.m */; };
+		7F9DFFEA24E8400D00D4714B /* ZKPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DFFE924E8400D00D4714B /* ZKPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		7F9DFFDE24E83FF100D4714B /* Runtime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Runtime; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9DFFE124E83FF100D4714B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F9DFFE824E8400D00D4714B /* ZKPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPerson.h; sourceTree = "<group>"; };
+		7F9DFFE924E8400D00D4714B /* ZKPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				7F9DFFE124E83FF100D4714B /* main.m */,
+				7F9DFFE824E8400D00D4714B /* ZKPerson.h */,
+				7F9DFFE924E8400D00D4714B /* ZKPerson.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 		7F9DFFD624E83FF000D4714B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZK;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Personal;
 				TargetAttributes = {
@@ -120,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9DFFE224E83FF100D4714B /* main.m in Sources */,
+				7F9DFFEA24E8400D00D4714B /* ZKPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
