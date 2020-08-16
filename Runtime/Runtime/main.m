@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "ZKPerson.h"
+#import <objc/runtime.h>
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
         ZKPerson *person = [[ZKPerson alloc] init];
+        
+        objc_setAssociatedObject(person, @"name", @"Zack", OBJC_ASSOCIATION_COPY_NONATOMIC);
         person.high = NO;
+        
+        __weak weakPerson = person;
         person.rich = NO;
         person.handsome = NO;
         person.thin = YES;
