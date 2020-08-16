@@ -25,6 +25,7 @@
 
 
 
+
 @interface ZKPerson ()
 
 {
@@ -101,6 +102,20 @@
 
 - (BOOL)isThin {
     return !!(_maleFlag.bits & ZKThinMask);
+}
+
+- (void)setMyEnum:(MyEnum)myEnum {
+    if (myEnum & MyEnumValueA) {
+        NSLog(@"MyEnumValueA");
+    }
+    
+    if (myEnum & MyEnumValueB) {
+        NSLog(@"MyEnumValueB");
+    }
+    
+    if (myEnum & MyEnumValueC) {
+        NSLog(@"MyEnumValueC");
+    }
 }
 
 

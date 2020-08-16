@@ -10,11 +10,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    MyEnumValueA = 1<<0,
+    MyEnumValueB = 1<<1,
+    MyEnumValueC = 1<<2,
+} MyEnum;
+
+
 @interface ZKPerson : NSObject
 
 //@property (nonatomic, assign, getter=isHigh) BOOL high;
 //@property (nonatomic, assign, getter=isRich) BOOL rich;
 //@property (nonatomic, assign, getter=isHandsome) BOOL handsome;
+
+@property (nonatomic, assign) MyEnum myEnum;
 
 - (void)setHigh:(BOOL)high;
 
