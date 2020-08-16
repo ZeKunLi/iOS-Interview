@@ -22,11 +22,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setHandsome:(BOOL)handsome;
 
+- (void)setThin:(BOOL)thin;
+
 - (BOOL)isHigh;
 
 - (BOOL)isRich;
 
 - (BOOL)isHandsome;
+
+- (BOOL)isThin;
 
 @end
 

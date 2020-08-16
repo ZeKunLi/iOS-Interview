@@ -13,11 +13,12 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSLog(@"Hello, World!");
         ZKPerson *person = [[ZKPerson alloc] init];
-        person.high = YES;
+        person.high = NO;
         person.rich = NO;
         person.handsome = NO;
+        person.thin = YES;
         
-        NSLog(@"高：%d 富：%d 帅： %d",person.isHigh,person.isRich,person.isHandsome);
+        NSLog(@"高：%d 富：%d 帅：%d 瘦：%d",person.isHigh,person.isRich,person.isHandsome,person.isThin);
         
     }
     return 0;

@@ -21,6 +21,7 @@
 #define ZKHighMask (1<<0)
 #define ZKRichMask (1<<1)
 #define ZKHandsomeMask (1<<2)
+#define ZKThinMask (1<<3)
 
 
 
@@ -28,12 +29,17 @@
 
 {
     @private
-    // 位域
-    struct {
-        unsigned int high : 1;
-        unsigned int rich : 1;
-        unsigned int handsome : 1;
-    } _maleFlag;
+    union {
+        // 位域
+        char bits;
+        struct {
+            char high     : 1;
+            char rich     : 1;
+            char handsome : 1;
+            char thin     : 1;
+        };
+    }_maleFlag;
+    
 }
 
 @end
@@ -50,27 +56,51 @@
 }
 
 - (void)setHigh:(BOOL)high {
-    _maleFlag.high = high;
+    if (high) {
+        _maleFlag.bits |= ZKHighMask;
+    } else {
+        _maleFlag.bits &= !ZKHighMask;
+    }
 }
 
 - (void)setRich:(BOOL)rich {
-    _maleFlag.rich = rich;
+    if (rich) {
+        _maleFlag.bits |= ZKRichMask;
+    } else {
+        _maleFlag.bits &= ~ZKRichMask;
+    }
 }
 
 - (void)setHandsome:(BOOL)handsome {
-    _maleFlag.handsome = handsome;
+    if (handsome) {
+        _maleFlag.bits |= ZKHandsomeMask;
+    } else {
+        _maleFlag.bits &= ~ZKHandsomeMask;
+    }
+}
+
+- (void)setThin:(BOOL)thin {
+    if (thin) {
+        _maleFlag.bits |= ZKThinMask;
+    } else {
+        _maleFlag.bits &= ~ZKThinMask;
+    }
 }
 
 - (BOOL)isHigh {
-    return _maleFlag.high;
+    return !!(_maleFlag.bits & ZKHighMask);
 }
 
 - (BOOL)isRich {
-    return _maleFlag.rich;
+    return !!(_maleFlag.bits & ZKRichMask);
 }
 
 - (BOOL)isHandsome {
-    return _maleFlag.handsome;
+    return !!(_maleFlag.bits & ZKHandsomeMask);
+}
+
+- (BOOL)isThin {
+    return !!(_maleFlag.bits & ZKThinMask);
 }
 
 
