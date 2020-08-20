@@ -7,7 +7,7 @@
 //
 
 #import "ZKPerson.h"
-
+#import <objc/runtime.h>
 
 // 掩码,一般用来按位与(&)运算的
 //#define ZKHighMask 1

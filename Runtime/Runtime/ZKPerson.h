@@ -24,6 +24,7 @@ typedef enum : NSUInteger {
 //@property (nonatomic, assign, getter=isHandsome) BOOL handsome;
 
 @property (nonatomic, assign) MyEnum myEnum;
+@property (nonatomic, copy) NSString *name;
 
 - (void)setHigh:(BOOL)high;
 
@@ -40,6 +41,8 @@ typedef enum : NSUInteger {
 - (BOOL)isHandsome;
 
 - (BOOL)isThin;
+
+- (void)test;
 
 @end
 
