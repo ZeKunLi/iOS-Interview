@@ -10,7 +10,6 @@
 #import "ZKPerson.h"
 #import <objc/runtime.h>
 #import "ZKDog.h"
-#import "ZKClassInfo.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -51,9 +50,12 @@ int main(int argc, const char * argv[]) {
         
         
         ZKDog *dog = [[ZKDog alloc] init];
-        
+//        [dog test];
         // 访问私有方法,dog 方法并没有暴露
-        [dog performSelector:@selector(test)];
+//        [dog performSelector:@selector(test)];
+        
+        [ZKDog test];
+        
         
         
     }

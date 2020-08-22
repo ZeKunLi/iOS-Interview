@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZKDog : NSObject
+//- (void)test;
 
++ (void)test;
 @end
 
 NS_ASSUME_NONNULL_END
