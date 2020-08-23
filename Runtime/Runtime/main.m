@@ -78,6 +78,22 @@ int main(int argc, const char * argv[]) {
         
         ZKStudent *student = [[ZKStudent alloc] init];
         [student run];
+        
+        
+#pragma mark -isKindOfClass&isMemberOfClass
+        // - isKindOfClass 判断当前类对象是否是传入的子类或者当前类的类对象
+        // - isMemberOfClass 判断当前对象的类对象是否是传入对象的类
+        if ([person isKindOfClass:[NSObject class]]) {
+            NSLog(@"YES");
+        }
+        
+        if ([ZKPerson isMemberOfClass:object_getClass([ZKPerson class])]) {
+            NSLog(@"元类对象相同YES");
+        }
+        
+        if ([ZKPerson isMemberOfClass:object_getClass([ZKDog class])]) {
+            NSLog(@"元类对象相同YES");
+        }
     }
     return 0;
 }

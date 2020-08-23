@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F2D043624F100D400B8C3E0 /* ZKCat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D043524F100D400B8C3E0 /* ZKCat.m */; };
+		7F2D043924F25DEB00B8C3E0 /* ZKStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D043824F25DEB00B8C3E0 /* ZKStudent.m */; };
 		7F9DFFE224E83FF100D4714B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DFFE124E83FF100D4714B /* main.m */; };
 		7F9DFFEA24E8400D00D4714B /* ZKPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DFFE924E8400D00D4714B /* ZKPerson.m */; };
 		7F9DFFEE24E9833B00D4714B /* ZKDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9DFFED24E9833B00D4714B /* ZKDog.m */; };
@@ -28,6 +29,9 @@
 /* Begin PBXFileReference section */
 		7F2D043424F100D400B8C3E0 /* ZKCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKCat.h; sourceTree = "<group>"; };
 		7F2D043524F100D400B8C3E0 /* ZKCat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKCat.m; sourceTree = "<group>"; };
+		7F2D043724F25DEB00B8C3E0 /* ZKStudent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKStudent.h; sourceTree = "<group>"; };
+		7F2D043824F25DEB00B8C3E0 /* ZKStudent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKStudent.m; sourceTree = "<group>"; };
+		7F2D043A24F2623500B8C3E0 /* ZKStudent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ZKStudent.cpp; sourceTree = "<group>"; };
 		7F9DFFDE24E83FF100D4714B /* Runtime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Runtime; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9DFFE124E83FF100D4714B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7F9DFFE824E8400D00D4714B /* ZKPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPerson.h; sourceTree = "<group>"; };
@@ -71,6 +75,9 @@
 				7F9DFFEB24E9667300D4714B /* isa.h */,
 				7F9DFFE824E8400D00D4714B /* ZKPerson.h */,
 				7F9DFFE924E8400D00D4714B /* ZKPerson.m */,
+				7F2D043724F25DEB00B8C3E0 /* ZKStudent.h */,
+				7F2D043824F25DEB00B8C3E0 /* ZKStudent.m */,
+				7F2D043A24F2623500B8C3E0 /* ZKStudent.cpp */,
 				7F9DFFEC24E9833B00D4714B /* ZKDog.h */,
 				7F9DFFED24E9833B00D4714B /* ZKDog.m */,
 				7F2D043424F100D400B8C3E0 /* ZKCat.h */,
@@ -137,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2D043924F25DEB00B8C3E0 /* ZKStudent.m in Sources */,
 				7F9DFFEE24E9833B00D4714B /* ZKDog.m in Sources */,
 				7F9DFFE224E83FF100D4714B /* main.m in Sources */,
 				7F9DFFEA24E8400D00D4714B /* ZKPerson.m in Sources */,
