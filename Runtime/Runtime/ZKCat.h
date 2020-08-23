@@ -1,8 +1,8 @@
 //
-//  ZKDog.h
+//  ZKCat.h
 //  Runtime
 //
-//  Created by ZeKun Li on 2020/8/16.
+//  Created by ZeKun Li on 2020/8/22.
 //  Copyright © 2020 Personal. All rights reserved.
 //
 
@@ -10,16 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZKDog : NSObject
-//- (void)test;
-
-+ (void)test;
-
-+ (void)classTest;
-
+@interface ZKCat : NSObject
 - (void)beta;
-
 - (int)test:(int)age;
++ (void)classTest;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -56,7 +56,14 @@ int main(int argc, const char * argv[]) {
         
         [ZKDog test];
         
+//        [dog performSelector:@selector(beta)];
+        [dog beta];
         
+        [dog test:18];
+        
+        [ZKDog classTest];
+        
+    
         
     }
     return 0;
