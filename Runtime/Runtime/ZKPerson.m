@@ -148,5 +148,8 @@ int age(id self,SEL _cmd) {
     }
 }
 
+- (void)run {
+    NSLog(@"%s",__func__);
+}
 
 @end

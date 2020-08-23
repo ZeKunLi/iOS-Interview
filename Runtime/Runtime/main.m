@@ -10,6 +10,7 @@
 #import "ZKPerson.h"
 #import <objc/runtime.h>
 #import "ZKDog.h"
+#import "ZKStudent.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -74,9 +75,9 @@ int main(int argc, const char * argv[]) {
         NSLog(@"@dynamic age == %d",[person age]);
         
         
-
         
-        
+        ZKStudent *student = [[ZKStudent alloc] init];
+        [student run];
     }
     return 0;
 }

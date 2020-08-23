@@ -46,6 +46,8 @@ typedef enum : NSUInteger {
 
 - (void)test;
 
+- (void)run;
+
 @end
 
 NS_ASSUME_NONNULL_END
