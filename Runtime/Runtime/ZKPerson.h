@@ -25,6 +25,8 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, assign) MyEnum myEnum;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, assign) int age;
+@property (nonatomic, copy) NSString *nike;
 
 - (void)setHigh:(BOOL)high;
 

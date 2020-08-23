@@ -47,6 +47,36 @@
 
 @implementation ZKPerson
 
+@dynamic age;
+@dynamic nike;
+
+
+
+void setAge(id self,SEL _cmd, int age) {
+    NSLog(@"@dynamic setAge == %d",age);
+}
+
+int age(id self,SEL _cmd) {
+    return 99;
+}
+
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    if (sel == @selector(age)) {
+        class_addMethod(self, sel, (IMP)age, "i@:");
+    } else if (@selector(setAge:)) {
+        class_addMethod(self, sel, (IMP)setAge, "v@:i");
+    }
+    return [super resolveInstanceMethod:sel];
+}
+
+- (void)setNike:(NSString *)nike {
+    objc_setAssociatedObject(self, @selector(nike), nike, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (NSString *)nike {
+    return objc_getAssociatedObject(self, @selector(nike));
+}
+
 - (instancetype)init
 {
     self = [super init];

@@ -62,8 +62,20 @@ int main(int argc, const char * argv[]) {
         [dog test:18];
         
         [ZKDog classTest];
+
         
-    
+        
+        [person setNike:@"往事随风"];
+        
+        NSLog(@"@dynamic nike == %@",[person nike]);
+        
+        [person setAge:20];
+        
+        NSLog(@"@dynamic age == %d",[person age]);
+        
+        
+
+        
         
     }
     return 0;
