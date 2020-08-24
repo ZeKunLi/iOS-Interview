@@ -57,4 +57,108 @@
 }
 
 
+- (void)scene1 {
+    
+    dispatch_group_t group = dispatch_group_create();
+    
+    dispatch_queue_t queue = dispatch_queue_create("QUEUE_CONCURRENT", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i<=100; i++) {
+            NSLog(@"任务一  %d  %@",i,[NSThread currentThread]);
+        }
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i<=100; i++) {
+            NSLog(@"任务二  %d  %@",i,[NSThread currentThread]);
+        }
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i<=100; i++) {
+            NSLog(@"任务三  %d  %@",i,[NSThread currentThread]);
+        }
+    });
+    
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"UI 操作");
+    });
+    
+}
+
+
+- (void)scene2 {
+    
+    dispatch_group_t group = dispatch_group_create();
+    
+    dispatch_queue_t queue = dispatch_queue_create("QUEUE_CONCURRENT", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i<=100; i++) {
+            NSLog(@"任务一  %d  %@",i,[NSThread currentThread]);
+        }
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i<=100; i++) {
+            NSLog(@"任务二  %d  %@",i,[NSThread currentThread]);
+        }
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        for (int i = 0; i<=100; i++) {
+            NSLog(@"任务三  %d  %@",i,[NSThread currentThread]);
+        }
+    });
+    
+    
+    dispatch_group_notify(group, queue, ^{
+        for (int i = 0; i<=100; i++) {
+            NSLog(@"任务四  %d  %@",i,[NSThread currentThread]);
+        }
+    });
+    
+    
+    dispatch_group_notify(group, queue, ^{
+        for (int i = 0; i<=100; i++) {
+            NSLog(@"任务五  %d  %@",i,[NSThread currentThread]);
+        }
+    });
+    
+}
+
+
+- (void)scene3 {
+    
+    dispatch_group_t group = dispatch_group_create();
+    
+    NSURL *url = [NSURL URLWithString:@"www.baidu.com"];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    
+    dispatch_group_enter(group);
+    NSURLSessionDataTask *task1 = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_group_leave(group);
+    }];
+    [task1 response];
+    
+    dispatch_group_enter(group);
+    NSURLSessionDataTask *task2 = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        dispatch_group_leave(group);
+    }];
+    [task2 response];
+    
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        NSLog(@"刷新 UI");
+    });
+    
+}
+
+
+
+
 @end
