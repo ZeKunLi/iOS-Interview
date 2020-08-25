@@ -99,4 +99,16 @@
     
 }
 
+
+/// 递归调用
+- (void)__recureiveMethod {
+    static int count = 0;
+    
+    if (count < 5) {
+        count ++;
+        NSLog(@"递归调用%d次",count);
+        [self __recureiveMethod];
+    }
+}
+
 @end

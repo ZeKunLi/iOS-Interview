@@ -17,6 +17,7 @@
 		7F2D048724F5483800B8C3E0 /* ZKBaseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D048624F5483700B8C3E0 /* ZKBaseDemo.m */; };
 		7F2D048B24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D048A24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m */; };
 		7F2D049124F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D049024F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m */; };
+		7F2D049724F557E100B8C3E0 /* ZKMutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D049624F557E100B8C3E0 /* ZKMutexDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		7F2D048A24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKOSSpinLockDemo.m; sourceTree = "<group>"; };
 		7F2D048F24F5536F00B8C3E0 /* ZKOSUnFairLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKOSUnFairLockDemo.h; sourceTree = "<group>"; };
 		7F2D049024F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKOSUnFairLockDemo.m; sourceTree = "<group>"; };
+		7F2D049524F557E100B8C3E0 /* ZKMutexDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKMutexDemo.h; sourceTree = "<group>"; };
+		7F2D049624F557E100B8C3E0 /* ZKMutexDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKMutexDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				7F2D048A24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m */,
 				7F2D048F24F5536F00B8C3E0 /* ZKOSUnFairLockDemo.h */,
 				7F2D049024F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m */,
+				7F2D049524F557E100B8C3E0 /* ZKMutexDemo.h */,
+				7F2D049624F557E100B8C3E0 /* ZKMutexDemo.m */,
 			);
 			path = Locks;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				7F2D048B24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m in Sources */,
 				7F2D049124F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m in Sources */,
 				7F2D048724F5483800B8C3E0 /* ZKBaseDemo.m in Sources */,
+				7F2D049724F557E100B8C3E0 /* ZKMutexDemo.m in Sources */,
 				7F2D047F24F4F63500B8C3E0 /* main.m in Sources */,
 				7F2D047124F4F63200B8C3E0 /* SceneDelegate.m in Sources */,
 			);
