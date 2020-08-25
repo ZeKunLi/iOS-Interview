@@ -14,6 +14,9 @@
 		7F2D047924F4F63500B8C3E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D047824F4F63500B8C3E0 /* Assets.xcassets */; };
 		7F2D047C24F4F63500B8C3E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2D047A24F4F63500B8C3E0 /* LaunchScreen.storyboard */; };
 		7F2D047F24F4F63500B8C3E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D047E24F4F63500B8C3E0 /* main.m */; };
+		7F2D048724F5483800B8C3E0 /* ZKBaseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D048624F5483700B8C3E0 /* ZKBaseDemo.m */; };
+		7F2D048B24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D048A24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m */; };
+		7F2D049124F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D049024F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		7F2D047B24F4F63500B8C3E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F2D047D24F4F63500B8C3E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F2D047E24F4F63500B8C3E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7F2D048524F5483700B8C3E0 /* ZKBaseDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKBaseDemo.h; sourceTree = "<group>"; };
+		7F2D048624F5483700B8C3E0 /* ZKBaseDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKBaseDemo.m; sourceTree = "<group>"; };
+		7F2D048924F54B1E00B8C3E0 /* ZKOSSpinLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKOSSpinLockDemo.h; sourceTree = "<group>"; };
+		7F2D048A24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKOSSpinLockDemo.m; sourceTree = "<group>"; };
+		7F2D048F24F5536F00B8C3E0 /* ZKOSUnFairLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKOSUnFairLockDemo.h; sourceTree = "<group>"; };
+		7F2D049024F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKOSUnFairLockDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,7 @@
 				7F2D047024F4F63200B8C3E0 /* SceneDelegate.m */,
 				7F2D047224F4F63200B8C3E0 /* ViewController.h */,
 				7F2D047324F4F63200B8C3E0 /* ViewController.m */,
+				7F2D048824F5485B00B8C3E0 /* Locks */,
 				7F2D047524F4F63200B8C3E0 /* Main.storyboard */,
 				7F2D047824F4F63500B8C3E0 /* Assets.xcassets */,
 				7F2D047A24F4F63500B8C3E0 /* LaunchScreen.storyboard */,
@@ -74,6 +84,19 @@
 				7F2D047E24F4F63500B8C3E0 /* main.m */,
 			);
 			path = Lock;
+			sourceTree = "<group>";
+		};
+		7F2D048824F5485B00B8C3E0 /* Locks */ = {
+			isa = PBXGroup;
+			children = (
+				7F2D048524F5483700B8C3E0 /* ZKBaseDemo.h */,
+				7F2D048624F5483700B8C3E0 /* ZKBaseDemo.m */,
+				7F2D048924F54B1E00B8C3E0 /* ZKOSSpinLockDemo.h */,
+				7F2D048A24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m */,
+				7F2D048F24F5536F00B8C3E0 /* ZKOSUnFairLockDemo.h */,
+				7F2D049024F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m */,
+			);
+			path = Locks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +125,7 @@
 		7F2D046124F4F63200B8C3E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZK;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Personal;
 				TargetAttributes = {
@@ -148,6 +172,9 @@
 			files = (
 				7F2D047424F4F63200B8C3E0 /* ViewController.m in Sources */,
 				7F2D046E24F4F63200B8C3E0 /* AppDelegate.m in Sources */,
+				7F2D048B24F54B1E00B8C3E0 /* ZKOSSpinLockDemo.m in Sources */,
+				7F2D049124F5536F00B8C3E0 /* ZKOSUnFairLockDemo.m in Sources */,
+				7F2D048724F5483800B8C3E0 /* ZKBaseDemo.m in Sources */,
 				7F2D047F24F4F63500B8C3E0 /* main.m in Sources */,
 				7F2D047124F4F63200B8C3E0 /* SceneDelegate.m in Sources */,
 			);
@@ -292,6 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MLN3Q39SR;
 				INFOPLIST_FILE = Lock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MLN3Q39SR;
 				INFOPLIST_FILE = Lock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
