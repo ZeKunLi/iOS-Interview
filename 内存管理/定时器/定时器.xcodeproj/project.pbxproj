@@ -16,6 +16,7 @@
 		7F2D04DC24F6AC3300B8C3E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D04DB24F6AC3300B8C3E0 /* main.m */; };
 		7F2D04E724F6B22100B8C3E0 /* ZKWeakDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D04E624F6B22100B8C3E0 /* ZKWeakDelegate.m */; };
 		7F2D04ED24F6BD7B00B8C3E0 /* ZKWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D04EC24F6BD7B00B8C3E0 /* ZKWeakProxy.m */; };
+		7F2D04F024F760B700B8C3E0 /* ZKThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D04EF24F760B700B8C3E0 /* ZKThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		7F2D04E624F6B22100B8C3E0 /* ZKWeakDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKWeakDelegate.m; sourceTree = "<group>"; };
 		7F2D04EB24F6BD7B00B8C3E0 /* ZKWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKWeakProxy.h; sourceTree = "<group>"; };
 		7F2D04EC24F6BD7B00B8C3E0 /* ZKWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKWeakProxy.m; sourceTree = "<group>"; };
+		7F2D04EE24F760B700B8C3E0 /* ZKThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKThread.h; sourceTree = "<group>"; };
+		7F2D04EF24F760B700B8C3E0 /* ZKThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				7F2D04E624F6B22100B8C3E0 /* ZKWeakDelegate.m */,
 				7F2D04EB24F6BD7B00B8C3E0 /* ZKWeakProxy.h */,
 				7F2D04EC24F6BD7B00B8C3E0 /* ZKWeakProxy.m */,
+				7F2D04EE24F760B700B8C3E0 /* ZKThread.h */,
+				7F2D04EF24F760B700B8C3E0 /* ZKThread.m */,
 				7F2D04D224F6AC3000B8C3E0 /* Main.storyboard */,
 				7F2D04D524F6AC3300B8C3E0 /* Assets.xcassets */,
 				7F2D04D724F6AC3300B8C3E0 /* LaunchScreen.storyboard */,
@@ -160,6 +165,7 @@
 				7F2D04CB24F6AC3000B8C3E0 /* AppDelegate.m in Sources */,
 				7F2D04DC24F6AC3300B8C3E0 /* main.m in Sources */,
 				7F2D04CE24F6AC3000B8C3E0 /* SceneDelegate.m in Sources */,
+				7F2D04F024F760B700B8C3E0 /* ZKThread.m in Sources */,
 				7F2D04E724F6B22100B8C3E0 /* ZKWeakDelegate.m in Sources */,
 				7F2D04ED24F6BD7B00B8C3E0 /* ZKWeakProxy.m in Sources */,
 			);

@@ -9,10 +9,13 @@
 #import "ViewController.h"
 #import "ZKWeakDelegate.h"
 #import "ZKWeakProxy.h"
+#import "ZKThread.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) NSTimer *timer;
+
+@property (nonatomic, strong) ZKThread *thread;
 
 @end
 
@@ -34,17 +37,25 @@
 //    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:weakDelegate selector:@selector(timerTest) userInfo:nil repeats:YES];
     
     // 解决方案2：
-    ZKWeakProxy *weakProxy = [[ZKWeakProxy alloc] initWithTarget:self];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:weakProxy selector:@selector(timerTest) userInfo:nil repeats:YES];
+//    ZKWeakProxy *weakProxy = [[ZKWeakProxy alloc] initWithTarget:self];
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:weakProxy selector:@selector(timerTest) userInfo:nil repeats:YES];
     
     
-    
+    // 子线程使用 NSTimer
+    __weak typeof(self) weakSelf = self;
+    self.thread = [[ZKThread alloc] initWithBlock:^{
+        ZKWeakProxy *weakProxy = [[ZKWeakProxy alloc] initWithTarget:weakSelf];
+        weakSelf.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:weakProxy selector:@selector(timerTest) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:weakSelf.timer forMode:NSDefaultRunLoopMode];
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    }];
+    [self.thread start];
     
     
 }
 
 - (void)timerTest {
-    NSLog(@"%s",__func__);
+    NSLog(@"%s - %@",__func__,[NSThread currentThread]);
 }
 
 - (void)displayTest {
@@ -54,6 +65,16 @@
 -(void)dealloc {
     NSLog(@"%s",__func__);
     [self.timer invalidate];
+    [self performSelector:@selector(stopThread) onThread:self.thread withObject:nil waitUntilDone:YES];
+}
+
+// 用于停止子线程的RunLoop
+- (void)stopThread {
+    
+    // 停止RunLoop
+    CFRunLoopStop(CFRunLoopGetCurrent());
+    // 清空线程
+    self.thread = nil;
 }
 
 @end
