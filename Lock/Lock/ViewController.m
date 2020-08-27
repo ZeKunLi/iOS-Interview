@@ -11,6 +11,7 @@
 #import "ZKOSSpinLockDemo.h"
 #import "ZKOSUnFairLockDemo.h"
 #import "ZKMutexDemo.h"
+#import "ZKLockDemo.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) ZKBaseDemo *demo;
@@ -23,10 +24,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.demo = [[ZKMutexDemo alloc] init];
+    self.demo = [[ZKLockDemo alloc] init];
     
 //    [_demo goBank];
-//    [_demo saleCoffees];
+    [_demo saleCoffees];
     
     
 }
