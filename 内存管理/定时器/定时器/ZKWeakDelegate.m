@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        _targer = target;
+        _target = target;
     }
     return self;
 }
@@ -26,7 +26,7 @@
 //}
 
 - (id)forwardingTargetForSelector:(SEL)aSelector {
-    return _targer;
+    return _target;
 }
 
 

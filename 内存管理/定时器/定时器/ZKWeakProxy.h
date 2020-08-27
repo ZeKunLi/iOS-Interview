@@ -1,5 +1,5 @@
 //
-//  ZKWeakDelegate.h
+//  ZKWeakProxy.h
 //  定时器
 //
 //  Created by ZeKun Li on 2020/8/26.
@@ -10,11 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZKWeakDelegate : NSObject
+@interface ZKWeakProxy : NSProxy
 
 @property (nonatomic, weak, readonly) id target;
 
 - (instancetype)initWithTarget:(id)target;
+
++ (instancetype)proxyWithTarget:(id)target;
 
 @end
 
