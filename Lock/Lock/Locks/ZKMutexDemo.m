@@ -17,6 +17,11 @@
 /// 递归锁
 @property (nonatomic, assign) pthread_mutex_t recureiveLock;
 
+/// 条件锁
+@property (nonatomic, assign) pthread_mutex_t conditionsLock;
+@property (nonatomic, assign) pthread_cond_t cond;
+@property (nonatomic, strong) NSMutableArray *coffees;
+
 @end
 
 @implementation ZKMutexDemo
@@ -26,11 +31,19 @@
     self = [super init];
     if (self) {
         
+        // 互斥锁
         pthread_mutex_init(&_coffeeLock, NULL);
         pthread_mutex_init(&_moneyLock, NULL);
+        
+        // 递归锁
         [self __initRecureiveLock];
         [self __recureiveMethod];
         
+        // 条件锁
+        pthread_mutex_init(&_conditionsLock, NULL);
+        pthread_cond_init(&_cond, NULL);
+        [self __conditionsMethod];
+    
     }
     return self;
 }
@@ -55,6 +68,7 @@
     pthread_mutex_unlock(&_moneyLock);
 }
 
+// 递归方法
 - (void)__recureiveMethod {
     
     pthread_mutex_lock(&_recureiveLock);
@@ -63,11 +77,47 @@
     
 }
 
+// 条件方法
+- (void)__conditionsMethod {
+    
+    self.coffees = @[].mutableCopy;
+    
+    [[[NSThread alloc] initWithTarget:self selector:@selector(__drinkCoffee) object:nil] start];
+    
+    sleep(1);
+    
+    [[[NSThread alloc] initWithTarget:self selector:@selector(__makingCoffee) object:nil] start];
+}
+
+// 制作咖啡
+- (void)__makingCoffee {
+    pthread_mutex_lock(&_conditionsLock);
+    [self.coffees addObject:@"☕️"];
+    NSLog(@"☕️制作完成%@",[NSThread currentThread]);
+    pthread_cond_signal(&_cond);
+    pthread_mutex_unlock(&_conditionsLock);
+}
+
+// 喝咖啡
+- (void)__drinkCoffee {
+    
+    pthread_mutex_lock(&_conditionsLock);
+    if (![self.coffees containsObject:@"☕️"]) {
+        pthread_cond_wait(&_cond, &_conditionsLock);
+    }
+    [self.coffees removeObject:@"☕️"];
+    NSLog(@"喝掉☕️%@",[NSThread currentThread]);
+    pthread_mutex_unlock(&_conditionsLock);
+    
+    
+}
+
 - (void)dealloc {
     
     pthread_mutex_destroy(&_coffeeLock);
     pthread_mutex_destroy(&_moneyLock);
     pthread_mutex_destroy(&_recureiveLock);
+    pthread_cond_destroy(&_cond);
 }
 
 
