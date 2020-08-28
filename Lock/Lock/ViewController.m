@@ -13,6 +13,7 @@
 #import "ZKMutexDemo.h"
 #import "ZKLockDemo.h"
 #import "ZKCondtionDemo.h"
+#import "ZKCondtionLockDemo.h"
 
 @interface ViewController ()
 
@@ -26,7 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.demo = [[ZKCondtionDemo alloc] init];
+    self.demo = [[ZKCondtionLockDemo alloc] init];
     
 //    [_demo goBank];
 //    [_demo saleCoffees];
