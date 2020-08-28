@@ -92,9 +92,12 @@
 // 制作咖啡
 - (void)__makingCoffee {
     pthread_mutex_lock(&_conditionsLock);
+    NSLog(@"☕️制作中。。。");
     [self.coffees addObject:@"☕️"];
     NSLog(@"☕️制作完成%@",[NSThread currentThread]);
     pthread_cond_signal(&_cond);
+    // 广播
+//    pthread_cond_broadcast(&_cond);
     pthread_mutex_unlock(&_conditionsLock);
 }
 
@@ -102,7 +105,9 @@
 - (void)__drinkCoffee {
     
     pthread_mutex_lock(&_conditionsLock);
+    NSLog(@"想喝☕️");
     if (![self.coffees containsObject:@"☕️"]) {
+        NSLog(@"没有☕️等待制作。。。");
         pthread_cond_wait(&_cond, &_conditionsLock);
     }
     [self.coffees removeObject:@"☕️"];
