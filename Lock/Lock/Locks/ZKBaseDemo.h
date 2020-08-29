@@ -14,9 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)saleCoffees;
 - (void)goBank;
-
+- (int)cupNumber;
 
 - (void)__saleCoffee;
+- (void)__makeCoffee;
 - (void)__saveMoney;
 - (void)__drawMoney;
 - (void)__recureiveMethod;

@@ -21,6 +21,7 @@
 		7F2D04F324F7FFF400B8C3E0 /* ZKLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D04F224F7FFF400B8C3E0 /* ZKLockDemo.m */; };
 		7F2D04F624F8053500B8C3E0 /* ZKCondtionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D04F524F8053500B8C3E0 /* ZKCondtionDemo.m */; };
 		7F2D04F924F8938C00B8C3E0 /* ZKCondtionLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D04F824F8938C00B8C3E0 /* ZKCondtionLockDemo.m */; };
+		7F79A93224FA08D4000C6DB9 /* ZKReadWriteDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F79A93124FA08D4000C6DB9 /* ZKReadWriteDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		7F2D04F524F8053500B8C3E0 /* ZKCondtionDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKCondtionDemo.m; sourceTree = "<group>"; };
 		7F2D04F724F8938C00B8C3E0 /* ZKCondtionLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKCondtionLockDemo.h; sourceTree = "<group>"; };
 		7F2D04F824F8938C00B8C3E0 /* ZKCondtionLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKCondtionLockDemo.m; sourceTree = "<group>"; };
+		7F79A93024FA08D3000C6DB9 /* ZKReadWriteDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKReadWriteDemo.h; sourceTree = "<group>"; };
+		7F79A93124FA08D4000C6DB9 /* ZKReadWriteDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKReadWriteDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				7F2D04F524F8053500B8C3E0 /* ZKCondtionDemo.m */,
 				7F2D04F724F8938C00B8C3E0 /* ZKCondtionLockDemo.h */,
 				7F2D04F824F8938C00B8C3E0 /* ZKCondtionLockDemo.m */,
+				7F79A93024FA08D3000C6DB9 /* ZKReadWriteDemo.h */,
+				7F79A93124FA08D4000C6DB9 /* ZKReadWriteDemo.m */,
 			);
 			path = Locks;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				7F2D049724F557E100B8C3E0 /* ZKMutexDemo.m in Sources */,
 				7F2D047F24F4F63500B8C3E0 /* main.m in Sources */,
 				7F2D047124F4F63200B8C3E0 /* SceneDelegate.m in Sources */,
+				7F79A93224FA08D4000C6DB9 /* ZKReadWriteDemo.m in Sources */,
 				7F2D04F924F8938C00B8C3E0 /* ZKCondtionLockDemo.m in Sources */,
 				7F2D04F624F8053500B8C3E0 /* ZKCondtionDemo.m in Sources */,
 			);

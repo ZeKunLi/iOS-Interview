@@ -14,6 +14,7 @@
 #import "ZKLockDemo.h"
 #import "ZKCondtionDemo.h"
 #import "ZKCondtionLockDemo.h"
+#import "ZKReadWriteDemo.h"
 
 @interface ViewController ()
 
@@ -27,10 +28,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.demo = [[ZKCondtionLockDemo alloc] init];
+    self.demo = [[ZKReadWriteDemo alloc] init];
     
 //    [_demo goBank];
-//    [_demo saleCoffees];
+    [_demo saleCoffees];
     
     
 }

@@ -19,12 +19,20 @@
 
 @implementation ZKBaseDemo
 
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        _money = 1000;
+        _cupNumber = 15;
+        
+    }
+    return self;
+}
 
 /// 去银行
 - (void)goBank {
-    
-    _money = 1000;
     
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     
@@ -44,8 +52,6 @@
 
 /// 出售咖啡
 - (void)saleCoffees {
-    
-    _cupNumber = 15;
     
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     
@@ -75,7 +81,7 @@
 - (void)__saleCoffee {
     
     int remainingCupNumber = _cupNumber;
-    sleep(.2);
+    sleep(1);
     _cupNumber = remainingCupNumber - 1;
     NSLog(@"剩余 %d 杯☕️ - %@",_cupNumber,[NSThread currentThread]);
 
@@ -109,6 +115,11 @@
         NSLog(@"递归调用%d次",count);
         [self __recureiveMethod];
     }
+}
+
+- (void)__makeCoffee {
+    NSLog(@"制作 1 杯 ☕️ %@",[NSThread currentThread]);
+    _cupNumber += 1;
 }
 
 @end
