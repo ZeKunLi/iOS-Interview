@@ -11,7 +11,7 @@
 #define ZK_TIME_SEMAPHORE_WAIT(semaphore) \
 dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
 
-#define ZK_TIME_SEMAPHORE_signal(semaphore) \
+#define ZK_TIME_SEMAPHORE_SIGNAL(semaphore) \
 dispatch_semaphore_signal(semaphore);
 
 static NSMutableDictionary *_timers;
@@ -35,7 +35,7 @@ static dispatch_semaphore_t _semaphore;
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
     ZK_TIME_SEMAPHORE_WAIT(_semaphore)
     _timers[@(key)] = timer;
-    ZK_TIME_SEMAPHORE_signal(_semaphore)
+    ZK_TIME_SEMAPHORE_SIGNAL(_semaphore)
     dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC, 1 * NSEC_PER_SEC);
     dispatch_source_set_event_handler(timer, task);
     dispatch_resume(timer);
@@ -66,12 +66,12 @@ static dispatch_semaphore_t _semaphore;
     dispatch_source_t timer = _timers[@(key)];
 
     if (timer) {
+        dispatch_source_cancel(timer);
         [_timers removeObjectForKey:@(key)];
-        dispatch_semaphore_signal(_semaphore);
     }
     
-    ZK_TIME_SEMAPHORE_WAIT(_semaphore)
-    dispatch_source_cancel(timer);
+    ZK_TIME_SEMAPHORE_SIGNAL(_semaphore)
+    
     
 }
 
