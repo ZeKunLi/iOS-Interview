@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SemaphoreObject.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,15 @@
     });
     
     printf("%d", 222);
+    SemaphoreObject *semaphore = [[SemaphoreObject alloc] init];
+    for (int i = 0; i < 1500; i ++) {
+        
+        [[[NSThread alloc] initWithBlock:^{
+            [semaphore downloadTVPlay];
+        }] start];
+    }
+    
+    
 }
 
 - (void)doSomeing {

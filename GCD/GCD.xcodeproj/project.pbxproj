@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F79A92F24F9563E000C6DB9 /* SemaphoreObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F79A92E24F9563E000C6DB9 /* SemaphoreObject.m */; };
 		815FC5342272EA1A0090C89E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815FC5332272EA1A0090C89E /* AppDelegate.m */; };
 		815FC5372272EA1A0090C89E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815FC5362272EA1A0090C89E /* ViewController.m */; };
 		815FC53A2272EA1A0090C89E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815FC5382272EA1A0090C89E /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F79A92D24F9563E000C6DB9 /* SemaphoreObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreObject.h; sourceTree = "<group>"; };
+		7F79A92E24F9563E000C6DB9 /* SemaphoreObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreObject.m; sourceTree = "<group>"; };
 		815FC52F2272EA1A0090C89E /* GCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815FC5322272EA1A0090C89E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		815FC5332272EA1A0090C89E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F79A92C24F94F6B000C6DB9 /* Semaphore */ = {
+			isa = PBXGroup;
+			children = (
+				7F79A92D24F9563E000C6DB9 /* SemaphoreObject.h */,
+				7F79A92E24F9563E000C6DB9 /* SemaphoreObject.m */,
+			);
+			path = Semaphore;
+			sourceTree = "<group>";
+		};
 		815FC5262272EA1A0090C89E = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +79,7 @@
 				815FC5322272EA1A0090C89E /* AppDelegate.h */,
 				815FC5332272EA1A0090C89E /* AppDelegate.m */,
 				815FC5352272EA1A0090C89E /* ViewController.h */,
+				7F79A92C24F94F6B000C6DB9 /* Semaphore */,
 				815FC548227310C50090C89E /* Barrier */,
 				815FC549227310C50090C89E /* Group */,
 				815FC5362272EA1A0090C89E /* ViewController.m */,
@@ -172,6 +185,7 @@
 				815FC5342272EA1A0090C89E /* AppDelegate.m in Sources */,
 				815FC54C227310D50090C89E /* UserCenter.m in Sources */,
 				815FC54F2273153A0090C89E /* GroupObject.m in Sources */,
+				7F79A92F24F9563E000C6DB9 /* SemaphoreObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
