@@ -8,8 +8,13 @@
 
 #import "ViewController.h"
 #import "SemaphoreObject.h"
+#import "Timer/TimerObject.h"
 
 @interface ViewController ()
+
+@property (nonatomic, weak) IBOutlet UITextView *textView;
+@property (nonatomic, weak) IBOutlet UILabel *label;
+@property (nonatomic, strong) NSMutableString *string;
 
 @end
 
@@ -48,12 +53,37 @@
     }
     
     
+    self.string = [NSMutableString string];
+    
+    [TimerObject timerTarget:self selector:@selector(updateTextView) after:0 key:TimerGlobalKeyA];
+    
+    [TimerObject timerTask:^{
+        static int count;
+        self.label.text = [NSString stringWithFormat:@"%d",count ++];
+    } interval:1 after:1 key:TimerGlobalKeyB];
+    
+
+}
+
+- (void)updateTextView {
+    [self.string appendFormat:@"%@\n", [NSString stringWithFormat:@"%@",[NSThread currentThread]]];
+    self.textView.text = self.string.copy;
+    [self.textView scrollRangeToVisible:NSMakeRange(self.textView.text.length, 1)];
 }
 
 - (void)doSomeing {
     for (int i = 0; i <= 10000; i++) {
         printf("%d", 100);
     }
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    for (int i = 0; i < 150; i++) {
+        dispatch_async(dispatch_queue_create("queue", DISPATCH_QUEUE_CONCURRENT), ^{
+            [TimerObject cancelTimerWithkey:TimerGlobalKeyB];
+        });
+    }
+    
 }
 
 
