@@ -7,8 +7,20 @@
 //
 
 #import "ZKPerson.h"
+#import <objc/runtime.h>
 
 @implementation ZKPerson
+
+- (instancetype)initWithName:(NSString *)name
+{
+    self = [super init];
+    if (self) {
+        _name = name;
+        _datas = [[NSMutableArray alloc] init];
+        _friends = [[NSMutableSet alloc] init];
+    }
+    return self;
+}
 
 @synthesize age = _age;
 - (void)setAge:(int)age {
@@ -54,11 +66,24 @@
 
 - (id)copyWithZone:(struct _NSZone *)zone {
     
-    ZKPerson *person = [[ZKPerson allocWithZone:zone] init];
-    person.age = self.age;
-    person.height = self.height;
-    person.name = self.name;
-    return person;
+    id copyObject = [[[self class] alloc] init];
+    
+    unsigned int count;
+    Ivar *ivars = class_copyIvarList([self class], &count);
+    
+    for (int  i = 0; i < count; i++) {
+        NSString *key =[[NSString stringWithUTF8String:ivar_getName(ivars[i])] substringFromIndex:1];
+        [copyObject setValue:[self valueForKey:key] forKey:key];
+    }
+    
+    return copyObject;
+}
+
+- (id)deepCopy {
+    ZKPerson *copy = [[[self class] alloc] initWithName:_name];
+    copy->_friends = [[NSMutableSet alloc] initWithSet:_friends copyItems:YES];
+    copy->_datas = [[NSMutableArray alloc] initWithArray:_datas copyItems:YES];
+    return copy;
 }
 
 - (NSString *)description {

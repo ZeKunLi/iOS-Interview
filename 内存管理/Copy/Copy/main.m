@@ -132,12 +132,29 @@ void test9() {
     
 }
 
+void test10() {
+    
+    ZKPerson *person = [[ZKPerson alloc] initWithName:@"Zack"];
+    ZKPerson *annePerson = [[ZKPerson alloc] initWithName:@"Anne"];
+    ZKPerson *frindPerson = [[ZKPerson alloc] initWithName:@"Frind"];
+    person.friends = [[NSMutableSet alloc] initWithObjects:annePerson,frindPerson, nil];
+    person.datas = @[frindPerson,annePerson].mutableCopy;
+    ZKPerson *clonePerson =  [person deepCopy];
+    [person.friends removeObject:annePerson];
+    NSLog(@"%@",person);
+    NSLog(@"%@",clonePerson);
+    
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
         
-        test9();
+        test10();
+        
+        
+        
     }
     return 0;
 }

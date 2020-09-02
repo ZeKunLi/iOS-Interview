@@ -12,9 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZKPerson : NSObject <NSCopying>
 @property (nonatomic, copy) NSMutableArray *datas;
+@property (nonatomic, strong) NSMutableSet <ZKPerson *>*friends;
 @property (nonatomic, assign) int age;
 @property (nonatomic, assign) int height;
 @property (nonatomic, retain) NSString *name;
+
+- (instancetype)initWithName:(NSString *)name;
+- (id)deepCopy;
 @end
 
 NS_ASSUME_NONNULL_END
