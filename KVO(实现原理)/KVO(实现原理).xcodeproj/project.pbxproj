@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F935B022510C02D00F20008 /* ZKPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F935B012510C02D00F20008 /* ZKPerson.m */; };
 		811F4A302261728D0096F9A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 811F4A2F2261728D0096F9A7 /* AppDelegate.m */; };
 		811F4A332261728D0096F9A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 811F4A322261728D0096F9A7 /* ViewController.m */; };
 		811F4A362261728D0096F9A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 811F4A342261728D0096F9A7 /* Main.storyboard */; };
@@ -18,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F935B002510C02D00F20008 /* ZKPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPerson.h; sourceTree = "<group>"; };
+		7F935B012510C02D00F20008 /* ZKPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKPerson.m; sourceTree = "<group>"; };
+		7F935B032510ECA900F20008 /* NSKVONotifying_ZKPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSKVONotifying_ZKPerson.h; sourceTree = "<group>"; };
+		7F935B042510ECA900F20008 /* NSKVONotifying_ZKPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSKVONotifying_ZKPerson.m; sourceTree = "<group>"; };
 		811F4A2B2261728D0096F9A7 /* KVO(实现原理).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KVO(实现原理).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		811F4A2E2261728D0096F9A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		811F4A2F2261728D0096F9A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +77,10 @@
 				811F4A45226172C40096F9A7 /* MObject.m */,
 				811F4A47226172F50096F9A7 /* MObserver.h */,
 				811F4A48226172F50096F9A7 /* MObserver.m */,
+				7F935B002510C02D00F20008 /* ZKPerson.h */,
+				7F935B012510C02D00F20008 /* ZKPerson.m */,
+				7F935B032510ECA900F20008 /* NSKVONotifying_ZKPerson.h */,
+				7F935B042510ECA900F20008 /* NSKVONotifying_ZKPerson.m */,
 				811F4A342261728D0096F9A7 /* Main.storyboard */,
 				811F4A372261728E0096F9A7 /* Assets.xcassets */,
 				811F4A392261728E0096F9A7 /* LaunchScreen.storyboard */,
@@ -156,6 +165,7 @@
 				811F4A332261728D0096F9A7 /* ViewController.m in Sources */,
 				811F4A3E2261728E0096F9A7 /* main.m in Sources */,
 				811F4A302261728D0096F9A7 /* AppDelegate.m in Sources */,
+				7F935B022510C02D00F20008 /* ZKPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
